@@ -1,13 +1,13 @@
 import React from 'react'
 import Menu from '../components/menu.jsx'
 
-const projects = () => {
+const pictures = () => {
   return (
     <div>
-      <Menu/>
-      projects
+        <Menu/>
+        pictures
     </div>
   )
 }
 
-export default projects
+export default pictures

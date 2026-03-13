@@ -1,8 +1,12 @@
 import React from 'react'
+import Menu from '../components/menu.jsx'
 
 const about = () => {
   return (
-    <div>about</div>
+    <div>
+      <Menu/>
+      about me
+    </div>
   )
 }
 

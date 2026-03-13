@@ -1,13 +1,13 @@
 import React from 'react'
 import Menu from '../components/menu.jsx'
 
-const projects = () => {
+const experience = () => {
   return (
     <div>
       <Menu/>
-      projects
+      experience
     </div>
   )
 }
 
-export default projects
+export default experience
