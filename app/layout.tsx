@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Armata, Bacasime_Antique, Inclusive_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const armata = Armata({
   subsets: ["latin"],
+  weight: "400",
+  variable: "--font-armata"
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const bacasime = Bacasime_Antique({
   subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bacasime"
+});
+
+const inclusive = Inclusive_Sans({
+  subsets: ["latin"],
+  variable: "--font-inclusive"
 });
 
 export const metadata: Metadata = {
@@ -25,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${armata.variable} ${inclusive.variable} ${bacasime.variable} antialiased`}
       >
         {children}
       </body>

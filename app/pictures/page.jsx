@@ -5,7 +5,12 @@ const pictures = () => {
   return (
     <div>
         <Menu/>
-        pictures
+        <div style={{alignItems: 'center', justifyItems: 'center'}}>
+          <figure>
+              <img src = "sunset59.jpeg"/>
+              <figcaption>Here's a picture I took at the train station I commute from!</figcaption>
+          </figure>
+        </div>
     </div>
   )
 }
