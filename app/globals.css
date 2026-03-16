@@ -5,14 +5,9 @@
   --text: #AC7383;
   --primary: #227b9b;
   --secondary: #ffca75;
+  --borderFill: #17C3B2;
+  --accent: #FE6D73;
 }
-
-/* @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-} */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -20,6 +15,8 @@
     --text: #8b4b5a;
     --primary: #64bddd;
     --secondary: #8a5500;
+    --borderFill: #3be8d7;
+    --accent: #fe6c71;
   }
 }
 
@@ -33,6 +30,19 @@ h3 {
   font-size: 150px;
 }
 
+h5 {
+  font-family: var(--font-inclusive), sans-serif;
+  font-size: 32px;
+  margin-bottom: 0.75em;
+
+}
+
+p {
+  font-family: var(--font-inclusive), sans-serif;
+  font-size: 16px;
+  margin-bottom: 1em;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -40,9 +50,7 @@ header {
   font-size: 20px;
   background: var(--primary);
   color: var(--secondary);
-  border-color: var(--primary);
-  border-width: 5px;
-  border-style: solid;
+  border: 15px solid var(--primary);
 }
 
 body {
@@ -53,8 +61,8 @@ body {
 }
 
 img {
-  border: 15px solid #17C3B2;
-  width: 400;
+  border: 35px solid var(--borderFill);
+  width: 500;
 }
 
 figcaption {
