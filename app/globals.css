@@ -15,7 +15,7 @@
     --text: #8b4b5a;
     --primary: #64bddd;
     --secondary: #8a5500;
-    --borderFill: #3be8d7;
+    --borderFill: #5b8a86;
     --accent: #fe6c71;
   }
 }
@@ -68,8 +68,3 @@ img {
   border: 35px solid var(--borderFill);
   width: 500;
 }
-
-figcaption {
-  font-size: 0.8em;
-}
-

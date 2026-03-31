@@ -1,19 +1,23 @@
 import React from 'react'
 import Menu from '../components/menu.jsx'
+import ImageHover from '../components/captionedImg.jsx'
+import { ImageSet } from "./images.ts"
 
 const pictures = () => {
   return (
     <div style={{margin: "30px"}}>
-        <Menu/>
-        <div style={{alignItems: 'center', justifyItems: 'center', gap: "20px"}}>
-          <figure>
-              <img src = "sunset59.jpeg"/>
-              <figcaption>Here's a picture I took at the train station I commute from!</figcaption>
-          </figure>
-          {/* maybe want to make pictures hoverable to show caption? prevent resizing issue */}
+        <Menu style={{marginBottom: "30px"}}/>
+        <div style={{display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "30px"}}>
+          {ImageSet.map((pic) => (
+            <ImageHover 
+              key={pic.id}
+              src={pic.src}
+              text={pic.text}
+            />
+          ))}
         </div>
     </div>
   )
-}
+};
 
 export default pictures
