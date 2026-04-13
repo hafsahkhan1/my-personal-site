@@ -3,6 +3,7 @@ import Menu from '../components/menu.jsx'
 import ActiveLink from '../components/activeLink.tsx'
 
 const about = () => {
+  // const isDark = useMediaQuery({ query: '(prefers-color-scheme: dark)' });
   return (
     <div style={{margin: "30px"}}>
       <Menu/>

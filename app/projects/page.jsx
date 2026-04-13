@@ -1,10 +1,12 @@
 import React from 'react'
 import Menu from '../components/menu.jsx'
 import ActiveLink from '../components/activeLink.tsx'
+import ProjectCard from '../components/projectCard.tsx'
 import ImageCarousel from '../components/imgCarousel.jsx'
-import { PodThaiImgs } from './imageSets.ts'
-import { CCWImgs } from './imageSets.ts'
-import { CLImgs } from './imageSets.ts'
+import {projectData} from './projectData.ts'
+import { PodThaiImgs } from "./imageSets";
+import { CCWImgs } from "./imageSets";
+import { CLImgs } from "./imageSets";
 
 // should probably turn into a ts file and map over
 
@@ -13,6 +15,28 @@ const projects = () => {
     <div style={{margin: "30px"}}>
       <Menu/>
       <h3>projects.</h3>
+      <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: "30px", placeItems: "center"}}>
+        {projectData.map((project) => (
+            <ProjectCard 
+              key={project.id}
+              title={project.title}
+              snap={project.snap}
+              role={project.role}
+              repo={project.repo}
+              link={project.link}
+              place={project.place}
+              location={project.location}
+              desc1={project.desc1}
+              desc2={project.desc2}
+              desc3={project.desc3}
+              images={project.images}
+              skills={project.skills}
+            />
+          ))}
+        </div>
+      </div>
+  );
+      {/* </div>
       <div style={{marginBottom: "50px"}}>
         <h5 style={{marginBottom: "0px"}}>WiCS Wired: Dev Project Spring 2026 (Personal Website)</h5>
         <p style={{whiteSpace: "pre"}}><b>Dev Participant</b>    |    <ActiveLink linkText={"Github Repo"} linkSrc="https://github.com/hafsahkhan1/my-personal-site" isMenu={false}/>    |    UIC    |    <i>Chicago, IL</i></p>
@@ -131,8 +155,8 @@ const projects = () => {
         </div>
         <ImageCarousel images={PodThaiImgs}/>
       </div>
-    </div>
-  )
+    </div> 
+  )*/}
 }
 
 export default projects

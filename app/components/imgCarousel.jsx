@@ -28,7 +28,7 @@ const ImageCarousel = ({ images }) => {
             <div className="image-container" style={{display:"flex", flex:"row", margin:"30px"}}>
                 <button className="nav-button left" onClick={handlePreviousClick} style={{fontFamily: "serif", fontWeight:"bolder"}}>&lt;</button>
 
-                {images.map((image, index) => (
+                {images && images.map((image, index) => (
                     <img 
                         src={image.url} 
                         alt="images" 
