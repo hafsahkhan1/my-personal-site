@@ -70,8 +70,9 @@ img {
 }
 
 button{
-  background: var(--borderFill);
-  border: 7px solid var(--borderFill);
+  background: var(--background);
+  border: 7px solid var(--background);
+  color: var(--secondary);
   border-radius: 25px;
   width: fit-content;
   outline-width: 4;
@@ -79,7 +80,7 @@ button{
 }
 
 button:hover{
-  box-shadow: 0 0 10px 2px var(--borderFill);
+  box-shadow: 0 0 10px 2px var(--primary);
 }
 
 .overlay{
@@ -111,6 +112,7 @@ button:hover{
   font-size: 28px;
   background: var(--primary);
   border: 15px solid var(--primary);
+  padding: 15px;
   border-radius: 25px;
   width: fit-content;
   display: flex;

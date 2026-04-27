@@ -36,7 +36,7 @@ export default function projectCard({ title, snap, role, repo, link, place, loca
     return(
         <div>
             <div className="card">
-                <div style={{alignItems: "center"}}><button onClick={() => setOpen(true)}>View Project: {snap}</button></div>
+                <div style={{alignItems: "center", backgroundColor: "transparent"}}><button onClick={() => setOpen(true)}>View Project: {snap}</button></div>
                 <div style={{display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: "20px", placeItems: "center"}}>
                     {skills && skills.map((proj) => (
                         <div className="skill" key={proj.id}>{proj.skill}</div>
